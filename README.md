@@ -69,103 +69,29 @@ CREATE TABLE tabelaprodutos (
 
 🔹 List
 ---
-A list is an ordered collection of elements. These elements can be of any type — numbers, strings, other lists, etc.
-A tuple is also an ordered collection, but immutable — once created, you cannot change its elements.
+
 ```
-from random import randrange, sample
 
-lista = []
-for i in range(20):
-    lista.append(randrange(100))
-
-amostra = sample(lista, 5)
-print("Amostra aleatória:", amostra)
 ```
 
 🔹 While
 ---
 ```
-contador = 1
 
-while contador <= 3:
-    nome = input(f'\nDigite o nome do {contador}º aluno: ')
-    nota_1 = float(input('Digite a 1ª nota: '))
-    nota_2 = float(input('Digite a 2ª nota: '))
-
-    media = (nota_1 + nota_2) / 2
-
-    print('-' * 40)
-    print(f'Aluno: {nome}')
-    print(f'Notas: {nota_1:.1f} e {nota_2:.1f}')
-    print(f'Média: {media:.2f}')
-    print('-' * 40)
-
-    contador += 1
 ```
-🔹 Exception
+🔹 Insert new Information
 ---
-try: Where you put code that might cause an error.
-except: Where you handle specific errors.
-else: Runs only if no error occurs.
-finally: Always runs, no matter what.
-Custom exception: InvalidAgeError is created to handle specific invalid input.
 ```
-# Custom exception
-class InvalidAgeError(Exception):
-    """Exception raised when the age is negative or unrealistically high."""
-    pass
-
-def check_age(age):
-    if age < 0 or age > 120:
-        raise InvalidAgeError("Invalid age! Age must be between 0 and 120.")
-    return f"Valid age: {age} years old."
-
-# Main program
-try:
-    age = int(input("Enter your age: "))  # Might raise ValueError if input is not a number
-    result = check_age(age)               # Might raise InvalidAgeError
-except ValueError:
-    print("Error: You must enter an integer number.")
-except InvalidAgeError as e:
-    print(f"Custom error: {e}")
-else:
-    print(result)
-finally:
-    print("Program execution finished. Thank you for using it!")
-```
-🔹frequency distribution
----
-
-A frequency distribution is a way to organize data that shows how often each value (or range of values) occurs in a dataset.
-```
- frequencia = dados['Profissão'].value_counts()
- percentual = dados['Profissão'].value_counts(normalize = True) * 100
-dist_freq_qualitativas = pd.DataFrame({'Frequência': frequencia, 'Porcentagem (%)': percentual})
-dist_freq_qualitativas.rename(index = {1: 'Estatístico', 2: 'Cientista de Dados', 3: 'Programador Python'}, inplace = True)
-dist_freq_qualitativas.rename_axis('Profissão', axis= 'columns', inplace = True)
-dist_freq_qualitativas
+INSERT INTO LivrosClássicos (id_livro, titulo_livro, autor, ano_publicacao)
+VALUES ('1', 'Moby Dick', 'Herman Melville', '1851'),
+('2', 'João Santos', 'joao.santos@provedor.com', 'Rua dos pinheiros, 25');
 ```
 
-🔹Create Histogram
----
-
-A histogram is a graphical representation that organizes a group of data points into user-defined ranges (called bins). It looks like a bar chart, but instead of showing categories, it shows how many data points fall into each range of values.
-```
-import seaborn as sns
-
-ax = sns.distplot(dados.Altura)
-
-ax.figure.set_size_inches(12, 6)
-ax.set_title('Distribuição de Frequências - Altura - KDE', fontsize=18)
-ax.set_xlabel('Metros', fontsize=14)
-ax
-```
----
 ### Adjustments and improvements.
 
 The project is still under development, and the upcoming updates will focus on the following tasks:
 
-- [x] Advanced courses about Phyton
+- [x] Advanced courses about SQL
 
 The following tools were used in the construction of the project:
 
