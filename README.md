@@ -27,6 +27,12 @@ Select * from TABELA;
 SELECT * FROM tabelafornecedores WHERE país_de_origem = 'China'
 Valores únicos
 SELECT DISTINCT cliente from tabelapedidos;
+
+
+SELECT * FROM Clientes WHERE Idade > 30 AND Sexo <> 'Masculino';
+SELECT * FROM Produtos WHERE Nome LIKE 'computador';
+SELECT * FROM tabelaprodutos WHERE preco_de_compra BETWEEN 200 AND 600 ORDER BY nome_do_produto;
+
 ```
 
 ---
@@ -48,6 +54,16 @@ ALTER TABLE tabelaclientes ADD Endereço_Cliente VARCHAR (250)
 ALTER TABLE nome_da_tabela
 DROP COLUMN nome_da_coluna;
 
+UPDATE tabelaclientes SET informacoes_de_contato = 'j.santos@email.com', 
+endereço_cliente = 'Rua dos paralelepipedos, 30 '
+WHERE id_cliente = 2;
+
+UPDATE tabelapedidos SET status = 'Enviado' WHERE status = 'Processando';
+
+
+DELETE FROM tabelafornecedores WHERE pais_de_origem = 'Turquia';
+
+
 ```
 🔹 Foreign key is connected to the primary key of another table
 ---
@@ -64,21 +80,9 @@ CREATE TABLE tabelaprodutos (
   FOREIGN KEY (Categoria) REFERENCES tabelacategorias (id_categoria),
   FOREIGN KEY (Fornecedor) REFERENCES tabelafornecedores (id)
 );
-
 ```
 
-🔹 List
----
 
-```
-
-```
-
-🔹 While
----
-```
-
-```
 🔹 Insert new Information
 ---
 ```
