@@ -49,10 +49,9 @@ CREATE TABLE tabelaclientes (
 🔹 Altering a Table
 ---
 ```
-ALTER TABLE tabelaclientes ADD Endereço_Cliente VARCHAR (250)
+ALTER TABLE tabelaclientes ADD Endereço_Cliente VARCHAR (250);
+ALTER TABLE nome_da_tabela DROP COLUMN coluna_antiga;
 
-ALTER TABLE nome_da_tabela
-DROP COLUMN nome_da_coluna;
 
 UPDATE tabelaclientes SET informacoes_de_contato = 'j.santos@email.com', 
 endereço_cliente = 'Rua dos paralelepipedos, 30 '
