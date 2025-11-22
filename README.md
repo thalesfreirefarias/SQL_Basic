@@ -42,6 +42,16 @@ SELECT * FROM tabelaprodutos WHERE preco_de_compra BETWEEN 200 AND 600 ORDER BY 
 SELECT * FROM livros WHERE (genero LIKE '%ficção científica%' OR genero LIKE '%fantasia%') AND ano_publicacao > 2000 AND editora IS NULL ORDER BY ano_publicacao DESC LIMIT 20;
 ```
 
+```
+Where x Having : You use where before group by and use having after.
+
+SELECT vendedor_id, SUM(valor_venda) AS total_vendas
+FROM vendas
+GROUP BY vendedor_id
+HAVING total_vendas > 10000;
+
+```
+
 ---
 🔹Creating Table
 ---
