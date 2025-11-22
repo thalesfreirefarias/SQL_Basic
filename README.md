@@ -30,6 +30,10 @@ SELECT * FROM tabelafornecedores WHERE país_de_origem = 'China'
 Valores únicos
 SELECT DISTINCT cliente from tabelapedidos;
 
+If you don't know the exactly name you also can search with
+
+Select * from tabelafornecedores where pais_de_origem like 'china%';
+
 
 SELECT * FROM Clientes WHERE Idade > 30 AND Sexo <> 'Masculino';
 SELECT * FROM Produtos WHERE Nome LIKE 'computador';
