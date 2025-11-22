@@ -36,9 +36,10 @@ Select * from tabelafornecedores where pais_de_origem like 'china%';
 
 
 SELECT * FROM Clientes WHERE Idade > 30 AND Sexo <> 'Masculino';
-SELECT * FROM Produtos WHERE Nome LIKE 'computador';
+
 SELECT * FROM tabelaprodutos WHERE preco_de_compra BETWEEN 200 AND 600 ORDER BY nome_do_produto;
 
+SELECT * FROM livros WHERE (genero LIKE '%ficção científica%' OR genero LIKE '%fantasia%') AND ano_publicacao > 2000 AND editora IS NULL ORDER BY ano_publicacao DESC LIMIT 20;
 ```
 
 ---
