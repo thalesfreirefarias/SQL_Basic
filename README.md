@@ -113,6 +113,24 @@ VALUES ('1', 'Moby Dick', 'Herman Melville', '1851'),
 SELECT (' pessoa colaboradora ' || nome || ' de CPF ' || cpf || ' possui o seguinte endereço: '
             || endereco) AS texto
             FROM Colaboradores;
+
+Get a information arround the value and convert to text
+
+SELECT (' O faturamento bruto médio foi ' || CAST(ROUND (AVG(faturamento_bruto),2) AS TEXT))
+FROM faturamento;
+```
+
+🔹 Case is similar with "IF"
+---
+
+```
+SELECT id_colaborador, cargo, salario,
+CASE
+WHEN salario < 3000 THEN 'Baixo'
+WHEN salario BETWEEN 3000 AND 6000 THEN 'Médio'
+ELSE 'Alto'
+END AS categoria_salario
+FROM HistoricoEmprego;
 ```
 
 ### Adjustments and improvements.
