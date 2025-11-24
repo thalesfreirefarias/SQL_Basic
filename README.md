@@ -107,6 +107,14 @@ VALUES ('1', 'Moby Dick', 'Herman Melville', '1851'),
 ('2', 'João Santos', 'joao.santos@provedor.com', 'Rua dos pinheiros, 25');
 ```
 
+🔹 Create a text with a information from a specific Table.
+---
+```
+SELECT (' pessoa colaboradora ' || nome || ' de CPF ' || cpf || ' possui o seguinte endereço: '
+            || endereco) AS texto
+            FROM Colaboradores;
+```
+
 ### Adjustments and improvements.
 
 The project is still under development, and the upcoming updates will focus on the following tasks:
