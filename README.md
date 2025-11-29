@@ -132,6 +132,34 @@ END AS categoria_salario
 FROM HistoricoEmprego;
 ```
 
+🔹 Union Tables
+```
+WHERE Clause:
+
+Purpose: Filters records based on a specified condition.
+
+UNION ALL:
+
+Purpose: Combines the results of two or more SELECT statements into a single result set.
+
+UNION:
+
+Purpose: Combines the results of two or more SELECT statements into a single result set, removing duplicate rows.
+
+SELECT nome, email FROM colaboradores_ativos
+UNION ALL
+SELECT nome, email FROM colaboradores_inativos;
+
+
+EXCEPT: This operator returns all rows that are present in the first query (set A) but not in the second query (set B). It subtracts set B from set A.
+INTERSECT: This operator returns all rows that are present in both the first query (set A) and the second query (set B). It returns the intersection of the two sets.
+
+SELECT colunas FROM tabelaA
+EXCEPT / Intersect
+SELECT colunas FROM tabelaB;
+
+```
+
 ### Adjustments and improvements.
 
 The project is still under development, and the upcoming updates will focus on the following tasks:
