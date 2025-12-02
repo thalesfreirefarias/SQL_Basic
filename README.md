@@ -104,6 +104,8 @@ CREATE TABLE tabelaprodutos (
 INSERT INTO LivrosClássicos (id_livro, titulo_livro, autor, ano_publicacao)
 VALUES ('1', 'Moby Dick', 'Herman Melville', '1851'),
 ('2', 'João Santos', 'joao.santos@provedor.com', 'Rua dos pinheiros, 25');
+
+UPDATE produtos SET descricao = 'Crossaint recheado com amêndoas.' WHERE id = 28
 ```
 
 🔹 Create a text with a information from a specific Table.
